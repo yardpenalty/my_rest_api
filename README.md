@@ -32,7 +32,7 @@ version number ie: 8.1.3 in .php-version
 ## WARNING: 
 
 if using the docker-compose-lamp repo image 
-we have to port to the built-in php built-in web server to get around the docker lamp stack's default :80
+we have to port through the built-in php built-in web server to port into the docker lamp stack's default :80
 port in order for proper routing (use one that is not being used). 
 
 // run $ php -S 127.0.0.1:80** -t public/
