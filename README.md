@@ -123,7 +123,7 @@ May have to install xml pkg
   
 # ORM Fixtures for faker data
 
-	* Instal fixture 
+	* Install fixture 
 //    $ composer require --dev orm-fixtures
 
   
