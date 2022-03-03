@@ -30,7 +30,8 @@ version number ie: 8.1.3 in .php-version
 
 ## WARNING: 
 
---IF using the docker-compose-lamp repo image 
+#### IF 
+if using the docker-compose-lamp repo image 
 we have to port to the built-in php built-in web server to get around the docker lamp stack
 use a port that is not being used. 
 
