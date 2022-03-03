@@ -50,7 +50,7 @@ http://127.0.0.1:8083/api/vehicles instead of http://127.0.0.1/my_rest_api/publi
 
 ### NOT IN USE: 
   
-  * Configure the driver (postgresql) and
+  * Configure the driver (postgresql) and 
     server_version (13) in config/packages/doctrine.yaml
  
 ### NOTE: Running on docker-compose-lamp mysql8 server
@@ -83,9 +83,14 @@ http://127.0.0.1:8083/api/vehicles instead of http://127.0.0.1/my_rest_api/publi
 //      github username and password:access token
 
 # Create Database on LAMP->Mysql8 Server
-
+ 
 //      $ php ./bin/console doctrine:database:create
 
+# symfony (CLI App builder)
+
+//      $ composer require --dev symfony/maker-bundle
+
+//      $ php bin/console list make
 # mysql NOTES
 
 MYSQL_ROOT_PASSWORD=tiger
