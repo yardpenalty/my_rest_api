@@ -27,13 +27,37 @@ class AppFixtures extends Fixture
         '2008'
     );
 
-    public function setRandArrayStr($array): ?string
+    const ARRAY_MSRP = array(
+        10012.50,
+        32000.20,
+        12695.00,
+        17635.99,
+        22312.00
+    );
+
+    public function getRandVin(){
+        return strtoupper(substr(md5(rand()), 0, 10)); 
+    }
+
+    public function getRandArrayStr($array): ?string
     {
 
         return $array[array_rand($array)];
     }
     
-    public function setRandType(): ?string
+    public function getRandMake($array): ?string
+    {
+
+        return $array[array_rand($array)];
+    }
+
+    public function getRandModel($array): ?string
+    {
+
+        return $array[array_rand($array)];
+    }
+
+    public function getRandType(): ?string
     {
 
         $type = array(self::TYPE_NEW, self::TYPE_USED);
@@ -43,15 +67,14 @@ class AppFixtures extends Fixture
     
     public function load(ObjectManager $manager)
     {
-        $faker = Factory::create();
 
         for ($i = 0; $i < 50; $i++) {
             $vehicles = new Vehicles();
             $vehicles->setDateAdded($faker->date_added);
-            $vehicles->setRandType();
-            $vehicles->setMsrp($faker->msrp);
+            $vehicles->setType($this->getRandType());
+            $vehicles->setMsrp($this->GetRandArrayStr(ARRAY_MSRP));
             $vehicles->setYear($faker->year);
-            $vehicles->setMake($faker->make);
+            $vehicles->setMake($this->GetRandArrayStr(ARRAY_YEAR));
             $vehicles->setModel($faker->model);
             $vehicles->setMiles($faker->miles);
             $vehicles->setVin($faker->vin);
