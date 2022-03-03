@@ -51,10 +51,9 @@ class AppFixtures extends Fixture
         return array_map('strval',$array[array_rand($array[0])]);
     }
 
-    public function getRandModel($array): ?string
+    public function getRandModel($make): ?string
     {
-        $make = $array[array_rand($array[0])];
-        $model = $make[0][array_rand($make)];
+        $model = array_rand($make);
         ddd($model);
         return array_map('strval',$model);
     }
@@ -64,18 +63,22 @@ class AppFixtures extends Fixture
 
         $type = array(self::TYPE_NEW, self::TYPE_USED);
 
-        return $type[array_rand($type)];
+        return array_map('strval',$type[array_rand($type)]);
     }
     
     public function load(ObjectManager $manager)
     {
 
         for ($i = 0; $i < 50; $i++) {
+
+            //make rand make model strings
+
+
             $vehicles = new Vehicles();
             $vehicles->setDateAdded($faker->date_added);
             $vehicles->setType($this->getRandType());
             $vehicles->setMsrp($this->GetRandArrayStr(ARRAY_MSRP));
-            $vehicles->setYear($faker->year);
+            $vehicles->setYear($this->GetRandArrayStr(ARRAY_YEAR));
             $vehicles->setMake($this->GetRandArrayStr(ARRAY_YEAR));
             $vehicles->setModel($faker->model);
             $vehicles->setMiles($faker->miles);
