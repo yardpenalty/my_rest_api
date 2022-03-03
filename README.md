@@ -31,10 +31,19 @@ version number ie: 8.1.3 in .php-version
 //     $ git branch -M main
 //     $ git push -u main origin
 //      github username and password:access token
-     
+ 
+#NOTES: 
 
+--IF using the docker-compose-lamp repo image 
+we have to port to the built-in php built-in web server to get to the docker lamp stack
+use a port that is not being used. 
+// run php -S 127.0.0.1:8083 -t public/
+note: leave terminal console open to keep built-in php server running (open new terminal).
 
-NOTES: 
+##Result:
+http://127.0.0.1:8083/api/vehicles instead of http://127.0.0.1/my_rest_api/public/index.php
+
+#mysql NOTES
 
 MYSQL_ROOT_PASSWORD=tiger
 
