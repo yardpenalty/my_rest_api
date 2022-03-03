@@ -48,13 +48,13 @@ class AppFixtures extends Fixture
     public function getRandMake($array): ?string
     {
 
-        return $array[array_rand($array)];
+        return $array[array_rand($array[0])];
     }
 
     public function getRandModel($array): ?string
     {
-
-        return $array[array_rand($array)];
+        //TODO MultiArray
+        return $array[array_rand($array[0])];
     }
 
     public function getRandType(): ?string
