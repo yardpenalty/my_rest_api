@@ -114,7 +114,7 @@ MYSQL_ROOT_PASSWORD=tiger
 
 /my_rest_api/.env 
 
-DATABASE_URL="mysql://root:tiger@127.0.0.1:3306/my_project?serverVersion=8&charset=utf8mb4"
+DATABASE_URL="mysql://root:tiger@127.0.0.1:3306/my_rest_api?serverVersion=8&charset=utf8mb4"
 
 May have to install xml pkg
 
