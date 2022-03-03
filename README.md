@@ -83,6 +83,10 @@ http://127.0.0.1:8083/api/vehicles instead of http://127.0.0.1/my_rest_api/publi
 
 //      github username and password:access token
 
+# Create Database on LAMP->Mysql8 Server
+
+//      $ php ./bin/console doctrine:database:create
+
 # mysql NOTES
 
 MYSQL_ROOT_PASSWORD=tiger
