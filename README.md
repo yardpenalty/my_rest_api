@@ -14,10 +14,13 @@ https://github.com/yardpenalty/docker-compose-lamp.git
 
 # symfony 5.4 setup
 --check php local and dev env
+
 //php -v
+
 // run $ symfony local:php:list 
 -- To control the version used in a directory, create a .php-version file that contains the 
 version number ie: 8.1.3 in .php-version
+
 // run $ symfony check:requirements
 # create symfony 5.4 project
 // run $ symfony new my_rest_api --version=5.4
