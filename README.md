@@ -1,5 +1,6 @@
 # my_rest_api
-#symfony 5.4 build
+### symfony 5.4 build
+
 This is a symfony5.4 test project dev environment using a Docker repo.
 
 Docker repo includes 4 Docker images that build 4 seperate docker containers:
