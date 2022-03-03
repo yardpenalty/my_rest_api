@@ -49,7 +49,7 @@ http://127.0.0.1:8083/api/vehicles instead of http://127.0.0.1/my_rest_api/publi
 
   * Modify your DATABASE_URL config in .env
 
-### TODO: 
+### NOT IN USE: 
   
   * Configure the driver (postgresql) and
     server_version (13) in config/packages/doctrine.yaml
