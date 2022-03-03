@@ -31,13 +31,11 @@ version number ie: 8.1.3 in .php-version
 
 ## WARNING: 
 
-#### IF 
-
 if using the docker-compose-lamp repo image 
 we have to port to the built-in php built-in web server to get around the docker lamp stack
 use a port that is not being used. 
 
-// run php -S 127.0.0.1:8084 -t public/
+// run $ php -S 127.0.0.1:8084 -t public/
 
 ### note: leave terminal console open to keep built-in php server running (open new terminal).
 
