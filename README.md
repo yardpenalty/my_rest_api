@@ -42,7 +42,7 @@ version number ie: 8.1.3 in .php-version
 
 //      github username and password:access token
  
-# NOTES: 
+## WARNING: 
 
 --IF using the docker-compose-lamp repo image 
 we have to port to the built-in php built-in web server to get around the docker lamp stack
@@ -52,7 +52,7 @@ use a port that is not being used.
 
 ### note: leave terminal console open to keep built-in php server running (open new terminal).
 
-## Result:
+### Result:
 http://127.0.0.1:8083/api/vehicles instead of http://127.0.0.1/my_rest_api/public/index.php
 
 # mysql NOTES
