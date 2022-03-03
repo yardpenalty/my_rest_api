@@ -95,24 +95,10 @@ http://127.0.0.1:8083/api/vehicles instead of http://127.0.0.1/my_rest_api/publi
 Available commands for the "make" namespace:
 
   make:auth                   Creates a Guard authenticator of different flavors
-  
-  make:command                Creates a new console command class
-  
-  make:controller             Creates a new controller class
-  
-  make:crud                   Creates CRUD for Doctrine entity class
-  
-  make:docker:database        Adds a database container to your docker-compose.yaml file
-  
-  make:entity                 Creates or updates a Doctrine entity class, and optionally an API Platform resource
-  
-  make:fixtures               Creates a new class to load Doctrine fixtures
-  
-  make:form                   Creates a new form class
-  
+    
   ...
 
-//	$ php bin/console make-entity --help
+//	$ php bin/console make:entity --help
 
   Options:
   -a, --api-resource    Mark this class as an API Platform resource (expose a CRUD API for it)
