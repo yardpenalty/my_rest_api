@@ -112,6 +112,16 @@ Available commands for the "make" namespace:
   
   ...
 
+//	$ php bin/console make-entity --help
+
+  Options:
+  -a, --api-resource    Mark this class as an API Platform resource (expose a CRUD API for it)
+
+
+//      $ php bin/console make:entity -a
+
+	* Now we have a working API @ http://localhost:8084/api
+
 # mysql NOTES
 
 MYSQL_ROOT_PASSWORD=tiger
