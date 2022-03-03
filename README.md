@@ -22,7 +22,16 @@ version number ie: 8.1.3 in .php-version
 # create symfony 5.4 project
 // run $ symfony new my_rest_api --version=5.4
 //  cd my_rest_api/
-
+# create git repo from project
+//     $ git init
+//     $ git add README.md
+//     $ git commit -m "gitsetup"
+-- create emtpy repo on github.com ie:my_rest_api
+//     $ git remote add origin https://github.com/yardpenalty/my_rest_api.git
+//     $ git branch -M main
+//     $ git push -u main origin
+//      github username and password:access token
+     
 
 
 NOTES: 
