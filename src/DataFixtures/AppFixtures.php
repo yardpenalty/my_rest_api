@@ -19,6 +19,20 @@ class AppFixtures extends Fixture
         array('Toyota','4-Runner','Camry','Corolla') 
     );  
 
+    const ARRAY_YEAR = array(
+        '2012',
+        '2017',
+        '2020',
+        '2022',
+        '2008'
+    );
+
+    public function setRandArrayStr($array): ?string
+    {
+
+        return $array[array_rand($array)];
+    }
+    
     public function setRandType(): ?string
     {
 
