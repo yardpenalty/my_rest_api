@@ -78,7 +78,7 @@ http://127.0.0.1:8083/api/vehicles instead of http://127.0.0.1/my_rest_api/publi
 
 //     $ git branch -M main
 
-//     $ git push -u main origin
+//     $ git push -u origin main
 
 //      github username and password:access token
 
