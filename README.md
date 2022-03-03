@@ -16,7 +16,7 @@ https://github.com/yardpenalty/docker-compose-lamp.git
 # symfony 5.4 setup
 --check php local and dev env
 
-//php -v
+// run $ php -v
 
 // run $ symfony local:php:list 
 -- To control the version used in a directory, create a .php-version file that contains the 
