@@ -120,6 +120,13 @@ May have to install xml pkg
 
 
   //  $ sudo apt install php-xml
+  
+# ORM Fixtures for faker data
+
+	* Instal fixture 
+//    $ composer require --dev orm-fixtures
+
+  
 
 # TODOS: 
 -- setup fixtures for seeding
