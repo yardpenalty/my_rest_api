@@ -42,19 +42,21 @@ class AppFixtures extends Fixture
     public function getRandArrayStr($array): ?string
     {
 
-        return $array[array_rand($array)];
+        return array_map('strval',$array[array_rand($array)]);
     }
     
     public function getRandMake($array): ?string
     {
 
-        return $array[array_rand($array[0])];
+        return array_map('strval',$array[array_rand($array[0])]);
     }
 
     public function getRandModel($array): ?string
     {
-        //TODO MultiArray
-        return $array[array_rand($array[0])];
+        $make = $array[array_rand($array[0])];
+        $model = $make[0][array_rand($make)];
+        ddd($model);
+        return array_map('strval',$model);
     }
 
     public function getRandType(): ?string
