@@ -25,7 +25,28 @@ version number ie: 8.1.3 in .php-version
 // run $ symfony check:requirements
 # create symfony 5.4 project
 // run $ symfony new my_rest_api --version=5.4
+
 //  cd my_rest_api/
+
+// run $ composer require api
+
+ doctrine/doctrine-bundle  instructions:
+
+  * Modify your DATABASE_URL config in .env
+
+  * Configure the driver (postgresql) and
+    server_version (13) in config/packages/doctrine.yaml
+
+ api-platform/core  instructions:
+
+  * Your API is almost ready:
+    1. Create your first API resource in src/Entity;
+    2. Go to /api to browse your API
+
+  * To enable the GraphQL support, run composer require webonyx/graphql-php,
+    then browse /api/graphql.
+
+
 # create git repo from project
 //     $ git init
 
@@ -43,6 +64,7 @@ version number ie: 8.1.3 in .php-version
 
 //      github username and password:access token
  
+
 ## WARNING: 
 
 --IF using the docker-compose-lamp repo image 
@@ -71,5 +93,6 @@ May have to install xml pkg
 
 # TODOS: 
 -- setup fixtures for seeding
+
 -- fix porting issue with virtualhost file
 
