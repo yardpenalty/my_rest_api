@@ -40,7 +40,7 @@ port in order for proper routing (use one that is not being used).
   * note leave terminal console open to keep built-in php server running (open new terminal).
 
 ### Result:
-http://127.0.0.1:8083/api/vehicles instead of http://127.0.0.1/my_rest_api/public/index.php
+http://127.0.0.1:8084/api/vehicles instead of http://127.0.0.1/my_rest_api/public/index.php
 
 // run $ composer require api
 
