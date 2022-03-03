@@ -32,10 +32,10 @@ version number ie: 8.1.3 in .php-version
 ## WARNING: 
 
 if using the docker-compose-lamp repo image 
-we have to port to the built-in php built-in web server to get around the docker lamp stack
-use a port that is not being used. 
+we have to port to the built-in php built-in web server to get around the docker lamp stack's default :80
+port in order for proper routing (use one that is not being used). 
 
-// run $ php -S 127.0.0.1:8084 -t public/
+// run $ php -S 127.0.0.1:80** -t public/
 
   * note leave terminal console open to keep built-in php server running (open new terminal).
 
@@ -91,6 +91,33 @@ http://127.0.0.1:8083/api/vehicles instead of http://127.0.0.1/my_rest_api/publi
 //      $ composer require --dev symfony/maker-bundle
 
 //      $ php bin/console list make
+
+Available commands for the "make" namespace:
+  make:auth                   Creates a Guard authenticator of different flavors
+  make:command                Creates a new console command class
+  make:controller             Creates a new controller class
+  make:crud                   Creates CRUD for Doctrine entity class
+  make:docker:database        Adds a database container to your docker-compose.yaml file
+  make:entity                 Creates or updates a Doctrine entity class, and optionally an API Platform resource
+  make:fixtures               Creates a new class to load Doctrine fixtures
+  make:form                   Creates a new form class
+  make:functional-test        Creates a new test class
+  make:message                Creates a new message and handler
+  make:messenger-middleware   Creates a new messenger middleware
+  make:migration              Creates a new migration based on database changes
+  make:registration-form      Creates a new registration form system
+  make:reset-password         Create controller, entity, and repositories for use with symfonycasts/reset-password-bundle
+  make:serializer:encoder     Creates a new serializer encoder class
+  make:serializer:normalizer  Creates a new serializer normalizer class
+  make:subscriber             Creates a new event subscriber class
+  make:test                   [make:unit-test|make:functional-test] Creates a new test class
+  make:twig-extension         Creates a new Twig extension class
+  make:unit-test              Creates a new test class
+  make:user                   Creates a new security user class
+  make:validator              Creates a new validator and constraint class
+  make:voter                  Creates a new security voter class
+
+
 # mysql NOTES
 
 MYSQL_ROOT_PASSWORD=tiger
