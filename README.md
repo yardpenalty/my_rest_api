@@ -37,7 +37,7 @@ use a port that is not being used.
 
 // run $ php -S 127.0.0.1:8084 -t public/
 
-### note: leave terminal console open to keep built-in php server running (open new terminal).
+  * note leave terminal console open to keep built-in php server running (open new terminal).
 
 ### Result:
 http://127.0.0.1:8083/api/vehicles instead of http://127.0.0.1/my_rest_api/public/index.php
