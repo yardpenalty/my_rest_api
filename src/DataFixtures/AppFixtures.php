@@ -11,14 +11,6 @@ class AppFixtures extends Fixture
     const TYPE_NEW = 'new';
     const TYPE_USED= 'used';
 
-    const ARRAY_MAKE_MODEL = array(
-        array('Ford','Edge', 'F-10', 'Focus'), 
-        array('Dodge','Charger',' Ram','Durango'),
-        array('Chevy',' Silverado', 'Cavalier','S-10'),
-        array('Subaru', 'Forester','Outback','Crosstrek'),
-        array('Toyota','4-Runner','Camry','Corolla') 
-    );  
-
     const ARRAY_YEAR = array(
         '2012',
         '2017',
@@ -65,14 +57,28 @@ class AppFixtures extends Fixture
 
         return array_map('strval',$type[array_rand($type)]);
     }
+
+    public function getRandMakeModelArray()
+    {
+        $models =array(
+            "Ford" => array('Edge', 'F-10', 'Focus'),
+            "Dodge" => array('Charger',' Ram','Durango'),
+            "Chevy" => array('Silverado', 'Cavalier','S-10'),
+            "Subaru" => array('Forester','Outback','Crosstrek'),
+            "Toyota" => array('4-Runner','Camry','Corolla')
+        ); 
+        $make = array_rand($models);
+        $model = $make[array_rand($make)];
+        return array($make, $model);
+        
+    }
     
     public function load(ObjectManager $manager)
     {
 
         for ($i = 0; $i < 50; $i++) {
-
             //make rand make model strings
-
+         
 
             $vehicles = new Vehicles();
             $vehicles->setDateAdded($faker->date_added);
