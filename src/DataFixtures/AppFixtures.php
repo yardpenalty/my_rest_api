@@ -58,7 +58,7 @@ class AppFixtures extends Fixture
         return array_map('strval',$type[array_rand($type)]);
     }
 
-    public function getRandMakeModelArray()
+    public function GetRandMakeOrModel($isMaker)
     {
         $makers =array(
             "Ford",// => array('Edge', 'F-10', 'Focus'),
@@ -83,14 +83,16 @@ class AppFixtures extends Fixture
         // Iterating over main array
         foreach ($models as $key1 => $val1) {
             if($key1 == $key){
-                echo "Maker array"; print_r($val1);
+                //echo "Maker array"; print_r($val1);
                 $car = array_rand($val1);
-                echo "Model:";
-                print_r($models[$key][$car]);
+                //echo "Model:";
+                //print_r($models[$key][$car]);
                 $result = [$maker,$models[$key][$car]];
-                print_r($result);
-
-                return $result;
+                //print_r($result);
+                if($isMaker)
+                    return $maker;
+                else
+                    return $models[$key][$car];
             }
         }
         
@@ -108,8 +110,8 @@ class AppFixtures extends Fixture
             $vehicles->setType($this->getRandType());
             $vehicles->setMsrp($this->GetRandArrayStr(ARRAY_MSRP));
             $vehicles->setYear($this->GetRandArrayStr(ARRAY_YEAR));
-            $vehicles->setMake($this->GetRandArrayStr(ARRAY_YEAR));
-            $vehicles->setModel($faker->model);
+            $vehicles->setMake($this->GetRandMakeOrModel(true));
+            $vehicles->setModel($this->GetRandMakeOrModel(false));
             $vehicles->setMiles($faker->miles);
             $vehicles->setVin($faker->vin);
             $vehicles->setDeleted($faker->deleted);
