@@ -79,7 +79,7 @@ class AppFixtures extends Fixture
         
         $key = array_rand($makers);
         $maker = $makers[$key];
-        echo "\r\n Maker key:".$key." value:".$maker;
+        //echo "\r\n Maker key:".$key." value:".$maker;
         // Iterating over main array
         foreach ($models as $key1 => $val1) {
             if($key1 == $key){
