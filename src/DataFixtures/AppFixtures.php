@@ -60,16 +60,39 @@ class AppFixtures extends Fixture
 
     public function getRandMakeModelArray()
     {
-        $models =array(
-            "Ford" => array('Edge', 'F-10', 'Focus'),
-            "Dodge" => array('Charger',' Ram','Durango'),
-            "Chevy" => array('Silverado', 'Cavalier','S-10'),
-            "Subaru" => array('Forester','Outback','Crosstrek'),
-            "Toyota" => array('4-Runner','Camry','Corolla')
+        $makers =array(
+            "Ford",// => array('Edge', 'F-10', 'Focus'),
+            "Dodge",// => array('Charger',' Ram','Durango'),
+            "Chevy",// => array('Silverado', 'Cavalier','S-10'),
+            "Subaru",// => array('Forester','Outback','Crosstrek'),
+            "Toyota"// => array('4-Runner','Camry','Corolla')
         ); 
-        $make = array_rand($models);
-        $model = $make[array_rand($make)];
-        return array($make, $model);
+
+        $models = [
+            ['Edge', 'F-10', 'Focus'],
+            ['Charger',' Ram','Durango'],
+            ['Silverado', 'Cavalier','S-10'],
+            ['Forester','Outback','Crosstrek'],
+            ['4-Runner','Camry','Corolla']
+
+        ];
+        
+        $key = array_rand($makers);
+        $maker = $makers[$key];
+        echo "\r\n Maker key:".$key." value:".$maker;
+        // Iterating over main array
+        foreach ($models as $key1 => $val1) {
+            if($key1 == $key){
+                echo "Maker array"; print_r($val1);
+                $car = array_rand($val1);
+                echo "Model:";
+                print_r($models[$key][$car]);
+                $result = [$maker,$models[$key][$car]];
+                print_r($result);
+
+                return $result;
+            }
+        }
         
     }
     
